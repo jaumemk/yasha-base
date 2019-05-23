@@ -1,5 +1,9 @@
+<h1 align="center">
+ Яша / Yasha Base
+</h1>
+
 <p align="center">
-Yasha / Яша Base
+    <i>Speedup development stack</i>
 </p>
 
 ## About Yasha Base
