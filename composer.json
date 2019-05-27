@@ -55,7 +55,9 @@
             "@php artisan key:generate --ansi",
             "@php artisan env:set DB_DATABASE $(echo ${PWD##*/} | tr - _)_test",
             "@php artisan db:create $(echo ${PWD##*/} | tr - _)_test",
-            "@php artisan migrate --seed"
+            "@php artisan backpack:base:install",
+            "@php artisan migrate --seed",
+            "@php artisan backpack:crud:install"
         ]
     }
 }
