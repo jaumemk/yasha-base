@@ -1,0 +1,24 @@
+.skin-blue-light .main-header .logo,
+.skin-blue .main-header .logo {
+    background-color: #5d87a1;
+}
+
+.skin-blue-light .main-header .navbar,
+.skin-blue .main-header .navbar {
+    background-color: #9eb7c7;
+}
+
+.skin-blue-light .wrapper,
+.skin-blue-light .main-sidebar,
+.skin-blue-light .left-side {
+    background-color: #ebebeb;
+}
+
+.skin-blue-light .main-sidebar {
+    border-right: 1px solid #ccc;
+    }
+
+.main-header .sidebar-toggle {
+    padding: 14px 14px;
+}
+
