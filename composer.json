@@ -1,17 +1,13 @@
 {
-    "name": "laravel/laravel",
+    "name": "javajan/javajan-base",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": [
-        "framework",
-        "laravel"
-    ],
-    "license": "MIT",
+    "description": "The Javajan Base",
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "yasha/yasha-base-backend": "dev-develop"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -56,7 +52,10 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
+            "@php artisan key:generate --ansi",
+            "@php artisan env:set DB_DATABASE $(echo ${PWD##*/} | tr - _)_test",
+            "@php artisan db:create $(echo ${PWD##*/} | tr - _)_test",
+            "@php artisan migrate --seed"
         ]
     }
 }
