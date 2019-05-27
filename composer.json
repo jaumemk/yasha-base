@@ -57,7 +57,7 @@
             "@php artisan db:create $(echo ${PWD##*/} | tr - _)_test",
             "@php artisan backpack:base:install",
             "@php artisan migrate --seed",
-            "@php artisan backpack:crud:install"
+            "@php artisan backpack:crud:install --elfinder=yes"
         ]
     }
 }
