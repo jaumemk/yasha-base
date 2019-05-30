@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -8,6 +8,14 @@
     <meta name="author" content="Javajan Serveis Internet SL">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>@yield('page_title') | {{ __('site/meta.title') }}</title>
+    
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+    <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
 </head>
 
@@ -76,7 +84,7 @@
             </footer>
         </div>
     </div>
-    <script src="{{ mix('/js/app.js') }}"></script>
+    <script src="{{ mix('/js/app.js') }}" defer></script>
 </body>
 
 </html>
