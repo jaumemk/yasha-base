@@ -2,17 +2,29 @@
     "name": "javajanteam/javajanbase",
     "type": "project",
     "description": "The Javajan Base",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./packages/yasha/yasha-base-backend",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
     "require": {
         "php": "^7.1.3",
+        "barryvdh/laravel-elfinder": "^0.4.2",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "yasha/yasha-base-backend": "dev-develop@dev"
     },
     "require-dev": {
+        "backpack/generators": "^1.2",
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
+        "laracasts/generators": "dev-master",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
         "phpunit/phpunit": "^7.5"
@@ -55,9 +67,9 @@
             "@php artisan key:generate --ansi",
             "@php artisan env:set DB_DATABASE $(echo ${PWD##*/} | tr - _)_test",
             "@php artisan db:create $(echo ${PWD##*/} | tr - _)_test",
-            "@php artisan backpack:base:install",
             "@php artisan migrate --seed",
-            "@php artisan backpack:crud:install --elfinder=yes"
+            "@php artisan backpack:base:user -N Superuser -E info@javajan.com --password='$2y$10$CHvmFEcxd4PZu6c53dp6GuvUF8InobD7KC/FUfyM7z7EtR9Nwxe8K' --encrypt=0",
+            "@php artisan auth:is-admin info@javajan.com"
         ]
     }
 }
