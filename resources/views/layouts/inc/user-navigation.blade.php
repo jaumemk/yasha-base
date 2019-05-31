@@ -3,29 +3,25 @@
             <nav class="nav justify-content-end">
                 @guest
 
-                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                <a class="nav-link" href="{{ route('login') }}">{{ __('site/navigation.login') }}</a>
 
                 @if (Route::has('register'))
 
-                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                <a class="nav-link" href="{{ route('register') }}">{{ __('site/navigation.register') }}</a>
 
                 @endif
                 @else
 
-                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
+                <span class="nav-link mr-auto text-muted">
                     {{ Auth::user()->name }}
-                </a>
+                </span>
 
-                <a class="nav-link" href="#">Mi cuenta</a>
-                
-                <a class="nav-link" href="#">
-                    Notificaciones
+                <a class="nav-link" href="#">{{ __('site/navigation.user') }}
                     <span class="badge badge-pill bg-secondary align-text-bottom text-white">7</span>
                 </a>
 
                 <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
+                    {{ __('site/navigation.logout') }}
                 </a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
