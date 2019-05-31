@@ -1,0 +1,13 @@
+{
+    "Login": "Entrar",
+    "Password": "Contraseña",
+    "Confirm Password": "Confirme la contraseña",
+    "Remember Me": "Recordarme",
+    "Register": "Registro",
+    "Forgot Your Password?": "¿Ha olvidado su contraseña?",
+    "Reset Password": "Restaurar la contraseña",
+    "E-Mail Address": "Dirección de email",
+    "Send Password Reset Link": "Envíenme el enlace para restaurar contraseña",
+    "You are logged in!": "¡Ha iniciado sessión!",
+    "Dashboard": "Panel"
+}

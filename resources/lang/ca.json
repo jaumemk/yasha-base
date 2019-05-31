@@ -1,0 +1,18 @@
+{
+    "Login": "Entrar",
+    "Password": "Contrasenya",
+    "Confirm Password": "Confirmeu la contrasenya",
+    "Remember Me": "Recordeu-me",
+    "Register": "Registre",
+    "Forgot Your Password?": "Heu oblidat la vostra contrasenya?",
+    "Reset Password": "Restaurar la contrasenya",
+    "E-Mail Address": "Direcció d'email",
+    "Send Password Reset Link": "Envieu-me enllaç per restaurar contrasenya",
+    "You are logged in!": "Heu iniciat sessió!",
+    "Dashboard": "Panell",
+    "Verify Your Email Address": "Verifiqueu el vostre correu electrónic",
+    "A fresh verification link has been sent to your email address." : "Hem enviat un enllaç de verificació a la seva bústia de correu.",
+    "Before proceeding, please check your email for a verification link.": "Abans de procedir, si us plau, busqui l'enllaç de restauració a la seva bústia de correu.",
+    "If you did not receive the email": "Si no ha rebut cap correu",
+    "click here to request another": "feu clic aquí per demanar-ne un altre."
+}
