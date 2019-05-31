@@ -36,11 +36,10 @@ Route::group([
     
     Route::name('template')->get(Lalo::transRoute('routes.template'), 'PageController@template');
     
-    Route::get(Lalo::transRoute('routes.develop'), function()
-    {
-        // Use this route to print examples and quick tests
-    })
-    ->name('develop');
+    // Route::name('develop')
+    // ->get(Lalo::transRoute('routes.develop'), function() {
+    //     // Use this route to print examples and quick tests
+    // });
 
 });
 
