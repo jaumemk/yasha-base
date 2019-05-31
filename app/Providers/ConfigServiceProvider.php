@@ -39,7 +39,9 @@ class ConfigServiceProvider extends ServiceProvider
             // If false, system will take app.php locale attribute
 			'laravellocalization.useAcceptLanguageHeader' => true,
 
-			'laravellocalization.hideDefaultLocaleInURL' => true
+            'laravellocalization.hideDefaultLocaleInURL' => true,
+            
+            'laravellocalization.urlsIgnored' => ['/admin/*/search'],
 		]);
     }
 
