@@ -5,8 +5,13 @@
     <ul class="dropdown-menu" role="menu">
         @foreach(Lalo::getSupportedLocales() as $localeCode => $properties)
         <li>
-            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ Lalo::getLocalizedURL($localeCode, null, [], true) }}">
+            <a href="{{ route('set-locale', ['locale' => $localeCode]) }}">
+                <span class="text-capitalize">
                 {{ $properties['native'] }}
+                </span>
+                @if(config('app.locale') == $localeCode)
+                    <i class="fa fa-angle-double-left pull-right" style="margin-top: 3px;"></i>
+                @endif
             </a>
         </li>
         @endforeach

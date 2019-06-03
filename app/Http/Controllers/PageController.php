@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Yasha\Backend\Models\Page;
 
 class PageController extends Controller
 {
@@ -14,6 +15,29 @@ class PageController extends Controller
     public function index()
     {
         return view('index');
+    }
+
+    public function backend($slug, $subs = null)
+    {
+
+        // Todo: should search all active translations, or better
+        // take the language parametrer from the URL!
+
+        $page = Page::where('slug->en', $slug)->orWhere('slug->es', $slug)->orWhere('slug->ca', $slug)->firstOrFail();
+
+        if (!$page)
+        {
+            abort(404, 'Please go back to our <a href="'.url('').'">homepage</a>.');
+        }
+
+        $page_title = $page->title;
+        $page_content = $page->content;
+        //dd($page);
+        //$this->data['page'] = $page->withFakes();
+
+        $data = compact('page_title', 'page_content');
+
+        return view('pages.'.$page->template, $data);
     }
 
     private function staticSimple($name)

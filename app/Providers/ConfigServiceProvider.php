@@ -13,6 +13,7 @@ class ConfigServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
         config([
 			'laravellocalization.supportedLocales' => [
 				'ca'  => [
@@ -41,8 +42,14 @@ class ConfigServiceProvider extends ServiceProvider
 
             'laravellocalization.hideDefaultLocaleInURL' => true,
             
-            'laravellocalization.urlsIgnored' => ['/admin/*/search'],
-		]);
+            'laravellocalization.urlsIgnored' => [''],
+        ]);
+
+        $locales = collect(config('laravellocalization.supportedLocales'))->map(function($locale, $key){
+            return $locale['native'];
+        })->toArray();
+
+        config(['backpack.crud.locales' => $locales]);
     }
 
     /**
