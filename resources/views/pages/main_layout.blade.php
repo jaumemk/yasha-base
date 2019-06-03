@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container py-5">
+    <div class="container py-5r">
     @isset($page_content)
     {!! $page_content !!}
     @endisset
