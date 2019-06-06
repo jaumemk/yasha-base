@@ -10,6 +10,18 @@
         <nav>
             <a class="btn btn-link" href="{{ route('index') }}">{{ __('site/navigation.index') }}</a>
 
+            @foreach (\Yasha\Backend\Models\MenuItem::all() as $item)
+                @if($item->type == 'page_link')
+                    <a class="btn btn-link" href="{{ route('page', [$item->page->slug]) }}" alt="{{ $item->page->title }}">PL {{ $item->name }}</a>
+                @endif
+                @if($item->type == 'internal_link')
+                    <a class="btn btn-link" href="{{ url($item->link) }}" alt="{{ $item->name }}" >IL {{ $item->name }}</a>
+                @endif
+                @if($item->type == 'external_link')
+                    <a class="btn btn-link" href="{{ url($item->link) }}" alt="{{ $item->name }}" target="_blank">EL {{ $item->name }}</a>
+                @endif
+            @endforeach
+
             <button class="btn btn-link" href="#" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">{{ __('site/navigation.contact') }}</button>
 
             <span class="dropdown">
