@@ -43,7 +43,7 @@ Route::group([
 
 
     /** CATCH-ALL ROUTE for backend pages  **/
-    Route::get('{page}/{subs?}', ['uses' => 'PageController@backend'])
+    Route::name('page')->get('{page}/{subs?}', ['uses' => 'PageController@backend'])
     ->where(['page' => '^(((?=(?!admin))(?=(?!\/)).))*$', 'subs' => '.*']);
 
 });

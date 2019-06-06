@@ -27,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
 </head>
 
-<body>
+<body data-route-name="{{ Route::currentRouteName() }}" data-route-action="{{ Route::current()->getActionMethod() }}" class="route-action-{{ Route::currentRouteName() }} route-name-{{ Route::current()->getActionMethod() }}">
     <header>
         <div id="navigation">
             @include('layouts/inc/navigation')

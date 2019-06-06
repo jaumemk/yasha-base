@@ -7,6 +7,15 @@ use Yasha\Backend\Models\Page;
 
 class PageController extends Controller
 {
+
+    public $data = [];
+
+    public function __construct(){
+
+        //parent::__construct();
+
+    }
+
     /**
      * Show the application index
      *
@@ -20,24 +29,21 @@ class PageController extends Controller
     public function backend($slug, $subs = null)
     {
 
-        // Todo: should search all active translations, or better
-        // take the language parametrer from the URL!
 
-        $page = Page::where('slug->en', $slug)->orWhere('slug->es', $slug)->orWhere('slug->ca', $slug)->firstOrFail();
+        
+        $page = Page::where('slug->'. app()->getLocale() , $slug)->firstOrFail();
+
 
         if (!$page)
         {
             abort(404, 'Please go back to our <a href="'.url('').'">homepage</a>.');
         }
 
-        $page_title = $page->title;
-        $page_content = $page->content;
-        //dd($page);
-        //$this->data['page'] = $page->withFakes();
+        $this->data['page'] = $page->withFakes();
+        $this->data['page_title'] = $page->title;
+        $this->data['page_content'] = $page->content;
 
-        $data = compact('page_title', 'page_content');
-
-        return view('pages.'.$page->template, $data);
+        return view('pages.'.$page->template, $this->data);
     }
 
     private function staticSimple($name)

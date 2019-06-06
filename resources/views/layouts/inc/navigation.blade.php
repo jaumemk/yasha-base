@@ -21,8 +21,12 @@
                     <a class="dropdown-item text-capitalize"
                     rel="alternate"
                     hreflang="{{ $locale }}"
+                    @if(Route::currentRouteName() == 'page')
+                    href="{{ url("$locale/" . $page->getTranslation('slug', $locale)) }}"
+                    @else
                     href="{{ Lalo::getLocalizedURL($locale, null, [], true) }}
-                                        ">
+                    @endif
+                    ">
                         @if(Lalo::getCurrentLocale() == $locale)
                         <span class="text-muted">{{ $value['native'] }}</span> <span class="float-right font-weight-light text-muted">
                         <i class="fas fa-angle-double-left"></i></span>
