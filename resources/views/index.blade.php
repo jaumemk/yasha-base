@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('page_title', 'Homepage')
+@section('page_title', __('pages/index.title') . ' | ')
 
 @section('content')
 
@@ -60,8 +60,8 @@
         <ul class="list-unstyled mt-3 mb-4">
           <li>create-project</li>
           <li>javajanteam/javajanbase</li>
-          <li>&nbsp;</li>
-          <li>&nbsp;</li>
+          <li>--prefer-dist/--prefer-src</li>
+          <li>dev-{branch}/x.x.x</li>
         </ul>
         <button type="button" class="font-weight-light btn btn-lg btn-block btn-primary">Go to readme.md</button>
       </div>
