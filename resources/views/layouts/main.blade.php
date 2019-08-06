@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{ __('site.meta.description') }}">
-    <meta name="author" content="Javajan Serveis Internet SL">
-    <meta name="generator" content="Javajan Base [dev-develop] <- Todo: chng this!">
+    <meta name="author" content="{{ config('site.former-company-info.former_company_name') }}">
+    <meta name="generator" content="YB [dev-develop] <- chng ths 4 vrsn!">
     <title>
         {{-- Displays 'Untitled page' if is not set in language file --}}
         @if(isset($page_title))

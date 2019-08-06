@@ -19,10 +19,10 @@ return [
     'logo_mini' => '<span style="color: #fff;"><b>A</b>B</span>',
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'Javajan Serveis d\'Internet',
+    'developer_name' => 'Example Company Name',
 
     // Developer website. Link in footer.
-    'developer_link' => 'https://javajan.com',
+    'developer_link' => 'https://example.com',
 
     // Show powered by Laravel Backpack in the footer?
     'show_powered_by' => false,
@@ -42,8 +42,8 @@ return [
     'overlays' => [
         'vendor/backpack/base/backpack.bold.css',
         'vendor/backpack/base/backpack.content.is.king.css',
-        'vendor/javajanbase/backend/theme.css',
-        'vendor/javajanbase/backend/custom.css'
+        'vendor/yasha-base/backend/theme.css',
+        'vendor/yasha-base/backend/custom.css'
     ],
 
     /*

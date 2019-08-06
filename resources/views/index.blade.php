@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col-8">
-                <h1 class="display-4">Javajan Base</h1>
+                <h1 class="display-4">Yasha Base</h1>
                 <p class="lead">
                     Cras odio leo, efficitur a condimentum at, malesuada in odio. Etiam euismod arcu sed molestie
                     lacinia. Fusce a semper metus. Aenean leo eros, malesuada eu elit non, placerat ultrices erat.
@@ -59,7 +59,7 @@
         <h1 class="card-title pricing-card-title">composer</h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li>create-project</li>
-          <li>javajanteam/javajanbase</li>
+          <li>yasha/yasha-base</li>
           <li>--prefer-dist/--prefer-src</li>
           <li>dev-{branch}/x.x.x</li>
         </ul>

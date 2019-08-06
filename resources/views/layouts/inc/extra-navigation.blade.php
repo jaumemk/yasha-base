@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-md-7 py-4 text-muted ">
-                    <h4 class="font-weight-light">About Javajan Base</h4>
+                    <h4 class="font-weight-light">About Yasha Base</h4>
                     {!! __('site/basics.about') !!}
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4 text-right">
