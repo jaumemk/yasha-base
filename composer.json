@@ -1,5 +1,5 @@
 {
-    "name": "yasha85/yasha-base",
+    "name": "yasha/yasha-base",
     "type": "project",
     "description": "The Yasha's base speedup development stack",
     "repositories": [
@@ -68,8 +68,8 @@
             "@php artisan env:set DB_DATABASE $(echo ${PWD##*/} | tr - _)_test",
             "@php artisan db:create $(echo ${PWD##*/} | tr - _)_test",
             "@php artisan migrate --seed",
-            "@php artisan backpack:base:user -N Superuser -E info@javajan.com --password='$2y$10$CHvmFEcxd4PZu6c53dp6GuvUF8InobD7KC/FUfyM7z7EtR9Nwxe8K' --encrypt=0",
-            "@php artisan auth:is-admin info@javajan.com",
+            "@php artisan backpack:base:user -N Superuser -E info@example.com --password='$2y$10$CHvmFEcxd4PZu6c53dp6GuvUF8InobD7KC/FUfyM7z7EtR9Nwxe8K' --encrypt=0",
+            "@php artisan auth:is-admin info@example.com",
             "@mkdir public/uploads"
         ]
     }
