@@ -27,7 +27,7 @@ __Dont forget to `git init` and push your first commit with the project. This is
 - `composer create-project yasha/yasha-base project-one dev-master`
 - `composer create-project yasha/yasha-base project-two dev-develop`
 
-__Warning__: this package `yasha/yasha-base-backend`, listed in *composer.json* in produnction environements __should be fixed__ to a stable version (Eg: "1.0.4"). For now we keep in in `dev-develop@dev`.
+__Warning__: this package `yasha/yasha-base-backend`, listed in *composer.json* in produnction environements __should be fixed__ to a stable version (Eg: "1.0.4"). For now we keep in in `dev-develop@dev` while package is in development status (<- todo).
 
 ## Whats included in this *base*
 
