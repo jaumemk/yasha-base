@@ -4,7 +4,7 @@
     <div class="container d-flex justify-content-end">
         <a href="{{ route('index') }}" class="navbar-brand d-flex align-items-center mr-auto">
             @include('inc/logo-svg', ['color' => '#ffffff'])
-            <strong class="font-weight-light">Javajan Base</strong>
+            <strong class="font-weight-light">Yasha Base</strong>
         </a>
 
         <nav>

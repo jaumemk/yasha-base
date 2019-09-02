@@ -28,11 +28,7 @@ class PageController extends Controller
 
     public function backend($slug, $subs = null)
     {
-
-
-        
         $page = Page::where('slug->'. app()->getLocale() , $slug)->firstOrFail();
-
 
         if (!$page)
         {
