@@ -17,7 +17,6 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "spatie/laravel-translation-loader": "^2.3",
         "yasha/yasha-base-backend": "dev-develop"
     },
     "require-dev": {
@@ -38,7 +37,8 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+            ]
         }
     },
     "autoload": {
