@@ -14,11 +14,11 @@ class LanguageLinesTableSeeder extends Seeder
     {
         LanguageLine::create([
             'group' => 'site/navigation',
-            'key' => 'register',
+            'key' => 'home',
             'text' => [
-                    'en' => 'Register',
-                    'es' => 'Registro',
-                    'ca' => 'Registre'
+                    'en' => 'Home',
+                    'es' => 'Inicio',
+                    'ca' => 'Inici'
             ]
         ]);
     }
