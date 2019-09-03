@@ -66,9 +66,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
-            "@php artisan env:set DB_DATABASE $(echo ${PWD##*/} | tr - _)_test",
             "@php artisan db:create $(echo ${PWD##*/} | tr - _)_test",
             "@php artisan vendor:publish --provider='Spatie\\TranslationLoader\\TranslationServiceProvider' --tag='migrations'",
+            "@php artisan env:set DB_DATABASE $(echo ${PWD##*/} | tr - _)_test",
             "@php artisan migrate --seed",
             "@php artisan backpack:base:user -N Superuser -E info@example.com --password='$2y$10$CHvmFEcxd4PZu6c53dp6GuvUF8InobD7KC/FUfyM7z7EtR9Nwxe8K' --encrypt=0",
             "@php artisan auth:is-admin info@example.com",
