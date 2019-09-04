@@ -8,7 +8,7 @@
         </a>
 
         <nav>
-            <a class="btn btn-link" href="{{ route('index') }}">{{ __('site/navigation.index') }}</a>
+            <a class="btn btn-link" href="{{ route('index') }}">{{ __('navigation.index') }}</a>
 
             @foreach (\Yasha\Backend\Models\MenuItem::all() as $item)
                 @if($item->type == 'page_link')
@@ -22,7 +22,7 @@
                 @endif
             @endforeach
 
-            <button class="btn btn-link" href="#" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">{{ __('site/navigation.contact') }}</button>
+            <button class="btn btn-link" href="#" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">{{ __('navigation.contact') }}</button>
 
             <span class="dropdown">
                 <button class="btn btn-link text-decoration-none dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

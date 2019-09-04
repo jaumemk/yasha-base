@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('page_title', __('site/navigation.reset-password') . ' | ')
+@section('page_title', __('navigation.reset-password') . ' | ')
 
 @section('content')
 <div class="container py-5">

@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('page_title', __('site/navigation.login') . ' | ')
+@section('page_title', __('navigation.login') . ' | ')
 
 @section('content')
 <div class="container py-5">

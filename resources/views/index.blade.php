@@ -1,7 +1,7 @@
 @extends('layouts.main')
 {{-- This home is for non logged in users --}}
 
-@section('page_title', __('pages/index.title') . ' | ')
+@section('page_title', __('index.title') . ' | ')
 
 @section('content')
 
