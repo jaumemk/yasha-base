@@ -108,5 +108,38 @@ class LanguageLinesTableSeeder extends Seeder
             ]
         ]);
 
+        LanguageLine::create([
+            'group' => 'basics',
+            'key' => 'about-title',
+            'text' => [
+                    'en' => 'About the site',
+                    'es' => 'Sobre la página web',
+                    'ca' => 'Sobre la página web'
+            ]
+        ]);
+
+        LanguageLine::create([
+            'group' => 'basics',
+            'key' => 'about',
+            'text' => [
+                    'en' => '
+                    <p>
+                    <em>Default description</em> for this <strong>website</strong>, <strong>with some</strong> HTML examples <a href="#" target="_blank" class="text-white-50">and fake links</a>.
+                    </p>
+                    ',
+                    'es' => '
+                    <p>
+                    <em>Default description</em> for this <strong>website</strong>, <strong>with some</strong> HTML examples <a href="#" target="_blank" class="text-white-50">and fake links</a>.
+                    </p>
+                    ',
+                    'ca' => '
+                    <p>
+                    <em>Default description</em> for this <strong>website</strong>, <strong>with some</strong> HTML examples <a href="#" target="_blank" class="text-white-50">and fake links</a>.
+                    </p>
+                    '
+            ]
+        ]);
+
+
     }
 }
