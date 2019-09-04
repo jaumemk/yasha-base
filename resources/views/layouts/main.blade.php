@@ -11,10 +11,10 @@
     <meta name="generator" content="YB [dev-develop] <- chng ths 4 vrsn!">
     
     <title>
-        {{  __('site/meta.title') }}
+        {{  __('meta.default-title') }}
     </title>
-    <meta name="description" content="{{ __('site/meta.description') }}">
-    <meta name="keywords" content="{{ __('site/meta.keywords') }}">
+    <meta name="description" content="{{ __('meta.default-description') }}">
+    <meta name="keywords" content="{{ __('meta.default-keywords') }}">
     
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
