@@ -1,4 +1,5 @@
 @extends('layouts.main')
+{{-- This home is for logged in users, acts as a Dashboard--}}
 
 @section('content')
 <div class="container py-5">

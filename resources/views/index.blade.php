@@ -1,4 +1,5 @@
 @extends('layouts.main')
+{{-- This home is for non logged in users --}}
 
 @section('page_title', __('pages/index.title') . ' | ')
 
