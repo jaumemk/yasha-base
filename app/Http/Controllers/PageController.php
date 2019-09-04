@@ -42,31 +42,6 @@ class PageController extends Controller
         return view('pages.'.$page->template, $this->data);
     }
 
-    private function staticSimple($name)
-    {
-        $page_title = __("pages/$name.title");
-        $page_content = __("pages/$name.content", config('site.former-company-info'));
-
-        $data = compact('page_title', 'page_content');
-
-        return view('pages.static-simple', $data);
-    }
-
-    public function legacy()
-    {
-        return $this->staticSimple('legacy');
-    }
-
-    public function privacy()
-    {
-        return $this->staticSimple('privacy');
-    }
-
-    public function cookies()
-    {
-        return $this->staticSimple('cookies');
-    }
-
     /**
      * Show the application template
      * 

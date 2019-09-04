@@ -33,11 +33,14 @@
                 </div>
                 <div class="col-6 col-md">
                     <h5>{{ __('site/footer.legacy') }}</h5>
+                    {{--
+                    <!-- This routes needs to be converted to dynamic -->
                     <ul class="list-unstyled text-small">
                         <li><a class="text-muted" href="{{ route('cookies') }}">{{ __('site/navigation.cookies') }}</a></li>
                         <li><a class="text-muted" href="{{ route('privacy') }}">{{ __('site/navigation.privacy') }}</a></li>
                         <li><a class="text-muted" href="{{ route('legacy') }}">{{ __('site/navigation.legacy') }}</a></li>
                     </ul>
+                    --}}
                 </div>
             </div>
             <div class="mt-5">
