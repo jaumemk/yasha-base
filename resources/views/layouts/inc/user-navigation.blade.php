@@ -3,11 +3,11 @@
             <nav class="nav justify-content-end">
                 @guest
 
-                <a class="nav-link" href="{{ route('login') }}">{{ __('site/navigation.login') }}</a>
+                <a class="nav-link" href="{{ route('login') }}">{{ __('navigation.login') }}</a>
 
                 @if (Route::has('register'))
 
-                <a class="nav-link" href="{{ route('register') }}">{{ __('site/navigation.register') }}</a>
+                <a class="nav-link" href="{{ route('register') }}">{{ __('navigation.register') }}</a>
 
                 @endif
                 @else
@@ -16,12 +16,12 @@
                     {{ Auth::user()->name }}
                 </span>
 
-                <a class="nav-link" href="#">{{ __('site/navigation.user') }}
+                <a class="nav-link" href="#">{{ __('navigation.user') }}
                     <span class="badge badge-pill bg-secondary align-text-bottom text-white">7</span>
                 </a>
 
                 <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    {{ __('site/navigation.logout') }}
+                    {{ __('navigation.logout') }}
                 </a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
