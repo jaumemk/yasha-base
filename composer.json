@@ -12,11 +12,11 @@
         }
     ],
     "require": {
+        "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "php": "^7.1.3",
-        "yasha/yasha-base-backend": "dev-develop"
+        "yasha/yasha-base-backend": "1.0.*"
     },
     "require-dev": {
         "backpack/generators": "^1.2",
@@ -68,6 +68,7 @@
             "@php artisan key:generate --ansi",
             "@php artisan db:create $(echo ${PWD##*/} | tr - _)_test",
             "@php artisan vendor:publish --provider='Spatie\\TranslationLoader\\TranslationServiceProvider' --tag='migrations'",
+            "@php artisan vendor:publish --provider='Backpack\\Settings\\SettingsServiceProvider'",
             "@php artisan env:set DB_DATABASE $(echo ${PWD##*/} | tr - _)_test",
             "@php artisan migrate --seed",
             "@php artisan backpack:base:user -N Superuser -E info@example.com --password='$2y$10$CHvmFEcxd4PZu6c53dp6GuvUF8InobD7KC/FUfyM7z7EtR9Nwxe8K' --encrypt=0",

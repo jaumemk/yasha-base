@@ -12,13 +12,13 @@
 
             @foreach (\Yasha\Backend\Models\MenuItem::all() as $item)
                 @if($item->type == 'page_link')
-                    <a class="btn btn-link" href="{{ route('page', [$item->page->slug]) }}" alt="{{ $item->page->title }}">PL {{ $item->name }}</a>
+                    <a class="btn btn-link" href="{{ route('page', [$item->page->slug]) }}" alt="{{ $item->page->title }}">{{ $item->name }}</a>
                 @endif
                 @if($item->type == 'internal_link')
-                    <a class="btn btn-link" href="{{ url($item->link) }}" alt="{{ $item->name }}" >IL {{ $item->name }}</a>
+                    <a class="btn btn-link" href="{{ url($item->link) }}" alt="{{ $item->name }}" >{{ $item->name }}</a>
                 @endif
                 @if($item->type == 'external_link')
-                    <a class="btn btn-link" href="{{ url($item->link) }}" alt="{{ $item->name }}" target="_blank">EL {{ $item->name }}</a>
+                    <a class="btn btn-link" href="{{ url($item->link) }}" alt="{{ $item->name }}" target="_blank">{{ $item->name }}</a>
                 @endif
             @endforeach
 
