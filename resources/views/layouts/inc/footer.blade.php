@@ -41,6 +41,14 @@
                         <li><a class="text-muted" href="{{ route('legacy') }}">{{ __('navigation.legacy') }}</a></li>
                     </ul>
                     --}}
+
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="{{ get_page_slug_from_id(\Setting::get('about-cookies-page')) }}">{{ __('navigation.cookies') }}</a></li>
+
+                        <li><a class="text-muted" href="{{ get_page_slug_from_id(\Setting::get('privacy-policy-page')) }}">{{ __('navigation.privacy') }}</a></li>
+
+                        <li><a class="text-muted" href="{{ get_page_slug_from_id(\Setting::get('legal-notice-page')) }}">{{ __('navigation.legacy') }}</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="mt-5">

@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <div class="container py-5r">
+    <div class="container py-5">
     @isset($page_content)
-    {!! $page_content !!}
+    {!! replace_setting_values($page_content) !!}
     @endisset
     </div>
 

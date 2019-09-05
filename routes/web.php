@@ -24,26 +24,15 @@ Route::group([
 
     Auth::routes();
 
-    Route::name('index')->get('/', 'PageController@index');
-
-    // Route::name('cookies')->get(Lalo::transRoute('routes.cookies'), 'PageController@cookies');
-    
-    // Route::name('legacy')->get(Lalo::transRoute('routes.legacy'), 'PageController@legacy');
-
-    // Route::name('privacy')->get(Lalo::transRoute('routes.privacy'), 'PageController@privacy');
-
-    // Route::name('home')->get(Lalo::transRoute('routes.home'), 'HomeController@index');
-    
-    // Route::name('template')->get(Lalo::transRoute('routes.template'), 'PageController@template');
+    Route::name('index')->get('/', '\Yasha\Backend\Http\Controllers\PageController@index');
     
     // Route::name('develop')
     // ->get(Lalo::transRoute('routes.develop'), function() {
     //     // Use this route to print examples and quick tests
     // });
 
-
     /** CATCH-ALL ROUTE for backend pages  **/
-    Route::name('page')->get('{page}/{subs?}', ['uses' => 'PageController@backend'])
+    Route::name('page')->get('{page}/{subs?}', ['uses' => '\Yasha\Backend\Http\Controllers\PageController@backend'])
     ->where(['page' => '^(((?=(?!admin))(?=(?!\/)).))*$', 'subs' => '.*']);
 
 });
