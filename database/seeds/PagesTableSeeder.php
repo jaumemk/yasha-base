@@ -14,7 +14,7 @@ class PagesTableSeeder extends Seeder
     {
         $title = [
             'en' => 'Welcome to example page',
-            'es' => 'Bienvenidos a la página de ejemlo',
+            'es' => 'Bienvenidos a la página de ejemplo',
             'ca' => 'Benvinguts a la página d\'exemple'
         ];
 
@@ -25,12 +25,15 @@ class PagesTableSeeder extends Seeder
         ];
 
         $content = [
-            'en' => 'h2>Benvinguts</h2><p>Aquesta es una p&aacute;gina d&#39;exemple per a %%_former_company_name_%%. Vost&eacute; pot contactar-nos per email a %%_former_company_email_%% o per correu convencional a:</p><p>%%_former_company_adress_1_%%<br />%%_former_company_adress_2_%%<br />%%_former_company_adress_country_%%</p>',
+            'ca' => '<h2>Benvinguts</h2><p>Aquesta es una p&aacute;gina d&#39;exemple per a %%_former_company_name_%%. Vost&eacute; pot contactar-nos per email a %%_former_company_email_%% o per correu convencional a:</p><p>%%_former_company_adress_1_%%<br />%%_former_company_adress_2_%%<br />
+            %%_former_company_country_%%</p>',
 
-            'es' => '<h2>Welcome</h2><p>This is a simple example page for %%_former_company_name_%%. You can contact us at %%_former_company_email_%% or by post email at this address:</p><p>%%_former_company_adress_1_%%<br />%%_former_company_adress_1_%%<br />%%_former_company_adress_country_%%</p>',
+            'en' => '<h2>Welcome</h2><p>This is a simple example page for %%_former_company_name_%%. You can contact us at %%_former_company_email_%% or by post email at this address:</p><p>%%_former_company_adress_1_%%<br />%%_former_company_adress_1_%%<br />
+            %%_former_company_country_%%</p>',
 
 
-            'ca' => '<h2>Bienvenidos</h2><p>Esta es una p&aacute;gina de ejemplo para %%_former_company_name_%%. Usted puede contactar con nosotros via email en %%_former_company_email_%% o por correo convencional en:</p><p>%%_former_company_adress_1_%%<br />%%_former_company_adress_2_%%<br />%%_former_company_adress_country_%%</p>'
+            'es' => '<h2>Bienvenidos</h2><p>Esta es una p&aacute;gina de ejemplo para %%_former_company_name_%%. Usted puede contactar con nosotros via email en %%_former_company_email_%% o por correo convencional en:</p><p>%%_former_company_adress_1_%%<br />%%_former_company_adress_2_%%<br />
+            %%_former_company_country_%%</p>'
         ];
 
         $page = Page::create([
