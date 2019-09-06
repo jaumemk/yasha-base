@@ -6,6 +6,10 @@
     <i>Speedup development stack</i>
 </p>
 
+<pre align="center">
+composer create-project yasha/yasha-base project-zero
+</pre>
+
 ## About Yasha's Base
 
 This i a multipourpose bootstrap / laravel / backpack stack base to speedup install and developments.
@@ -19,11 +23,12 @@ Installing is as simple as running this command in the Host where we're developi
 
 The command __should__ run in a working environement with `php` & `mysql`, otherwise *composer* will fail at the end and we'll need to run the comands listed below in the *What create-project does* section.
 
-__Dont forget to `git init` and push your first commit with the project. This is no a `git clone`.__
+__Dont forget to `git init` and push your first commit with the project. This is not a `git clone`.__
+
+### Considerations
 
 #### Examples
 
-- `composer create-project yasha/yasha-base project-zero 1.0.0`
 - `composer create-project yasha/yasha-base project-one dev-master`
 - `composer create-project yasha/yasha-base project-two dev-develop`
 
@@ -52,19 +57,22 @@ This create-project takes care with the following actions running the following 
     - `php artisan db:create $(echo ${PWD##*/} | tr - _)_test`
 
 
-- Installs Backpack with everything & creates first user with the account: *admin@example.com*
+- Installs Backpack with everything & creates first user with the account: *info@example.com*
     - `php artisan backpack:base:install`
     - `php artisan migrate --seed`
     - `php artisan backpack:crud:install --elfinder=yes`
 
-- The first user password is hashed in the seeder. (To do: an artisan command to set the admin password).
+- The first user password is hashed in `composer.json` file.
 
 ## Coming in next releases
 
-- Basic route translations
-- Install clockwork for debuging pourposes
-- to do...
+- Add some user administration
+- Add permissions
+- Add image compression cached/on the fly, based on URL (eg: /image/thumb/image.png, /image/big/image.png, etc.)
+- ...
 
 ## Known bugs
 
 - Removing a Page which is linked trough a Menu Item makes all web unaccessible until the Menu Item its removed.
+- Page preview button doesn't work as expected when backend/frontend language is not the same.
+- Backend language switcher fails on some controllers.
