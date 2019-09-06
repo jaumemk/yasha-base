@@ -54,7 +54,7 @@ class LanguageLinesTableSeeder extends Seeder
 
         LanguageLine::create([
             'group' => 'meta',
-            'key' => 'default-keyboards',
+            'key' => 'default-keywords',
             'text' => [
                     'en' => 'website, keyboards, coma, separated',
                     'es' => 'plabras, clave, sepadadas, por comas',

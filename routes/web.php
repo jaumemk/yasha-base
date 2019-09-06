@@ -24,12 +24,9 @@ Route::group([
 
     Auth::routes();
 
-    Route::name('index')->get('/', '\Yasha\Backend\Http\Controllers\PageController@index');
-    
-    // Route::name('develop')
-    // ->get(Lalo::transRoute('routes.develop'), function() {
-    //     // Use this route to print examples and quick tests
-    // });
+    Route::name('index')->get('/','\Yasha\Backend\Http\Controllers\PageController@index');
+
+    Route::name('auth.home')->get('home','HomeController@index');
 
     /** CATCH-ALL ROUTE for backend pages  **/
     Route::name('page')->get('{page}/{subs?}', ['uses' => '\Yasha\Backend\Http\Controllers\PageController@backend'])

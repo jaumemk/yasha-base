@@ -64,3 +64,7 @@ This create-project takes care with the following actions running the following 
 - Basic route translations
 - Install clockwork for debuging pourposes
 - to do...
+
+## Known bugs
+
+- Removing a Page which is linked trough a Menu Item makes all web unaccessible until the Menu Item its removed.

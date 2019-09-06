@@ -3,8 +3,8 @@
 @section('content')
 
     <div class="container py-5">
-    @isset($page_content)
-    {!! replace_setting_values($page_content) !!}
+    @isset($page->content)
+    {!! replace_setting_values($page->content) !!}
     @endisset
     </div>
 
