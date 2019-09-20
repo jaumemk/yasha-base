@@ -64,15 +64,17 @@ This create-project takes care with the following actions running the following 
 
 - The first user password is hashed in `composer.json` file.
 
-## Coming in next releases
+## Coming features in next releases
 
-- Add some user administration
-- Add permissions
-- Add image compression cached/on the fly, based on URL (eg: /image/thumb/image.png, /image/big/image.png, etc.)
-- ...
+- Add some user administration & permissions
+- Add image compression cached/on the fly, based on URL (eg: /image/thumb/image.png, /image/big/image.png, etc.) Check those libs: http://image.intervention.io, https://docs.spatie.be/laravel-medialibrary/.
+- Improve/develop deployment script & make a configuration in PHP/.env to change default folder from "public" to "public_html". 
 
-## Known bugs
+## Known bugs to fix in next releases & important improvements
 
 - Removing a Page which is linked trough a Menu Item makes all web unaccessible until the Menu Item its removed.
 - Page preview button doesn't work as expected when backend/frontend language is not the same.
 - Backend language switcher fails on some controllers.
+- Add Admin user to Seeders because when refreshing user admin is lost. (Remove it from composer?)
+- Check loguin route, for both controllers: frontend and backend. (Look at the Middelware).
+- Make a request for base fields or convert them to required.
