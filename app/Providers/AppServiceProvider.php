@@ -23,6 +23,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if(env('MYSQL_LEGACY', false))
+        {
+            // Because of our mySQL version we need this fix
+            // https://laravel-news.com/laravel-5-4-key-too-long-error   
+
+            \Illuminate\Support\Facades\Schema::defaultStringLength(191);
+        }
     }
 }
