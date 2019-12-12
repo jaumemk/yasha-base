@@ -70,6 +70,8 @@ This create-project takes care with the following actions running the following 
 - Add image compression cached/on the fly, based on URL (eg: /image/thumb/image.png, /image/big/image.png, etc.) Check those libs: http://image.intervention.io, https://docs.spatie.be/laravel-medialibrary/.
 - Improve/develop deployment script & make a configuration in PHP/.env to change default folder from "public" to "public_html". 
 - Make a default contact form with more fields, and better email destination management. (put email address in backend config).
+- Add a backup tool for database. (Think about setting a cron task when first deploy).
+- Add cookies consent from spatie library.
 
 ## Known bugs to fix in next releases & important improvements
 
